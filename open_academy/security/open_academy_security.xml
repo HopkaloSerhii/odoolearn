@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="base_module_category_open_academy" model="ir.module.category">
+            <field name="name">Open academy</field>
+            <field name="description">Desciption for group</field>
+            <field name="sequence">201</field>
+            <!-- <field name="parent_id" ref="module_category_customizations"/> -->
+        </record>
+
+         <record id="group_open_academy_user" model="res.groups">
+            <field name="name">User</field>
+            <field name="comment">Read only</field>
+            <field name="category_id" ref="base_module_category_open_academy"/>
+        </record>
+    
+        <record id="group_open_academy_manager" model="res.groups">
+            <field name="name">Administrator</field>
+            <field name="comment">All access</field>
+            <field name="category_id" ref="base_module_category_open_academy"/>
+        </record>
+
+        <record id="open_academy_manager_rule" model="ir.rule">
+            <field name="name">Restricts write and unlink accesses to the responsible of a course</field>
+            <field name="model_id" ref="model_open_academy_course"/>
+            <field name="groups" eval="[(4, ref('open_academy.group_open_academy_manager'))]"/>
+            <field name="domain_force">[('responsible_user_id', '=', user.id)]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+    </data>
+</odoo>

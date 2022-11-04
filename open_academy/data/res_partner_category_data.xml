@@ -1,0 +1,20 @@
+<odoo>
+    <data>
+          <record id="res_partner_category_teacher" model="res.partner.category">
+            <field name="name">Teacher</field>
+            <field name="active">True</field>
+          </record>
+
+          <record id="res_partner_category_techlevel1" model="res.partner.category">
+            <field name="name">Level 1</field>
+            <field name="active">True</field>
+            <field name="parent_id" ref="res_partner_category_teacher"/>
+          </record>
+
+          <record id="res_partner_category_techlevel2" model="res.partner.category">
+            <field name="name">Level 2</field>
+            <field name="active">True</field>
+            <field name="parent_id" ref="res_partner_category_teacher"></field>
+          </record>
+     </data>
+</odoo>
