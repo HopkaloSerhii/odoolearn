@@ -26,7 +26,7 @@
                     <group col="2">
                         <field name="start_date" />
                         <field name="duration" />
-                        <field name="numder_of_seats" />
+                        <field name="number_of_seats" />
                         <field name="percentage_of_seats" widget="progressbar"/>
                         <field name="instructor_id" />
                         <field name="course_id" />
@@ -66,7 +66,7 @@
           <graph string="Bar chart" sample="1">
               <field name="course_id"/>
               <field name="start_date" type="measure"/>
-              <field name="numder_of_seats" type="measure"/>
+              <field name="number_of_seats" type="measure"/>
           </graph>
         </field>
     </record>

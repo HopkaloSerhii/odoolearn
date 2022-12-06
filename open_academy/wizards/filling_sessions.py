@@ -12,7 +12,5 @@ class FillingSessions(models.TransientModel):
     
 
     def action_filling_sessions_apply(self):
-        # ids = self._context.get('active_ids')
-        # ids1 = self.env.context["active_ids"]
         for session in self.sessions_ids:
             session.attendes_ids = self.attendes_ids

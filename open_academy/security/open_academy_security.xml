@@ -6,7 +6,6 @@
             <field name="name">Open academy</field>
             <field name="description">Desciption for group</field>
             <field name="sequence">201</field>
-            <!-- <field name="parent_id" ref="module_category_customizations"/> -->
         </record>
 
          <record id="group_open_academy_user" model="res.groups">

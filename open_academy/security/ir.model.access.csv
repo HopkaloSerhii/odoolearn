@@ -5,3 +5,4 @@ access_open_academy_course,open_academy.course,model_open_academy_course,open_ac
 access_open_academy_session,open_academy.session,model_open_academy_session,base.group_user,1,0,0,0
 access_open_academy_session,open_academy.session,model_open_academy_session,open_academy.group_open_academy_manager,1,1,1,1
 access_open_academy_session,open_academy.session,model_open_academy_session,open_academy.group_open_academy_user,1,1,1,0
+access_open_academy_filling_sessions,open_academy.filling_sessions,model_open_academy_filling_sessions,base.group_user,1,1,1,1

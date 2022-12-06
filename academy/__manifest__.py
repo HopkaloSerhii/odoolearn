@@ -1,45 +1,41 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Open Academy",
+    'name': "Academy",
 
     'summary': """
-        Learning how to create a module.""",
+        Short (1 phrase/line) summary of the module's purpose, used as
+        subtitle on modules listing or apps.openerp.com""",
 
     'description': """
         Long description of module's purpose
     """,
 
-    'author': "Serhii",
-    'website': "http://localhost",
+    'author': "My Company",
+    'website': "http://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
-    'category': 'Customizations',
-    'version': '1.0.4',
+    'category': 'Uncategorized',
+    'version': '0.5',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
-
+    'depends': ['mail', 'website_sale'],
     # always loaded
     'data': [
-        'security/open_academy_security.xml',
         'security/ir.model.access.csv',
-        'wizards/filling_sessions_views.xml',
-        'data/courses_data.xml',
-        'views/courses_views.xml',
-        'views/sessions_views.xml',
-        'data/res_partner_category_data.xml',
-        'views/res_partner_views.xml',
-        'reports/sessions_report.xml',
+        'data/data.xml',
+        'views/templates.xml',
+        'views/views.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
-         # 'demo/demo.xml',
+        'demo/demo1.xml',
+        'demo/demo2.xml',
     ],
     'installable': True,
     'application': True,
     'auto_install': False,
     'license': 'LGPL-3',
-    'sequence': -100,
+    'sequence': -99,
 }
